@@ -1,0 +1,6 @@
+{
+  "name": "Developer Portfolio",
+  "description": "A premium, responsive portfolio template for developers featuring light/dark mode, interactive project showcases, and mobile phone frame mockups.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
