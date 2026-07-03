@@ -133,7 +133,9 @@ const PROJECTS_DATA: Project[] = [
     techHighlights: [
       'Formulated roommate-matching algorithms to automate placement.',
       'Designed database models for complex housing constraints.',
-      'Created real-time laundry peak-usage visualization trackers.'
+      'Created real-time laundry peak-usage visualization trackers.',
+      'Use these accounts to login: Student: UGR/659/12, Proctor: PROC/720/16, Staff: STF/748/15, Security: SEC/493/15',
+      'The password is the Middle number'
     ],
     isMobile: false,
     isTeam: true,
