@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 // EMAILJS CREDENTIALS
 const EMAILJS_SERVICE_ID = 'service_po863hd';
 const EMAILJS_TEMPLATE_ID = 'template_if5wtc9';
-const EMAILJS_PUBLIC_KEY = 'EkaX_9_GSpT9yf7h30w5w';
+const EMAILJS_PUBLIC_KEY = 'IY6Rf-s4CHtiw386b';
 
 // ✅ YOUR REAL EMAIL ADDRESS
 const YOUR_EMAIL = 'fevensamuelrahel@gmail.com';

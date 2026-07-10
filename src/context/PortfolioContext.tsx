@@ -4,7 +4,7 @@ import { PortfolioConfig } from '../types';
 const DEFAULT_CONFIG: PortfolioConfig = {
   githubUrl: 'https://github.com/fevensamuel',
   linkedinUrl: 'https://www.linkedin.com/in/feven-samuel-087a23419/',
-  resumeUrl: '/public/FevenSamuel_Resume.pdf', 
+  resumeUrl: '/FevenSamuel_Resume.pdf', 
 
   // Project Live Demo Links (Vercel URLs)
   dhmsVercelUrl: 'https://aau-dhms.vercel.app/', 

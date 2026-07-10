@@ -136,7 +136,7 @@ export default function Hero() {
 
           {/* Resume Download Button - Direct link to PDF in public folder */}
           <a
-            href="/public/FevenSamuel_Resume.pdf"
+            href="/FevenSamuel_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-6 py-3 bg-zinc-100 text-zinc-900 hover:bg-zinc-200/80 dark:bg-zinc-900 dark:text-zinc-50 dark:hover:bg-zinc-800/80 font-medium rounded-xl hover:shadow-md hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2 border border-zinc-200/50 dark:border-zinc-800/50 cursor-pointer text-sm"
