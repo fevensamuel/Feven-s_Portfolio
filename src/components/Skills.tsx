@@ -40,6 +40,7 @@ export default function Skills() {
         { name: 'Python', level: 40, icon: <Code2 className="w-4 h-4" />, color: 'bg-amber-600' },
         { name: 'PHP', level: 80, icon: <Braces className="w-4 h-4" />, color: 'bg-rose-600' },
         { name: 'JavaScript', level: 80, icon: <Code2 className="w-4 h-4" />, color: 'bg-yellow-500' },
+        { name: 'TypeScript', level: 70, icon: <Code2 className="w-4 h-4" />, color: 'bg-blue-500' },
       ],
     },
     {

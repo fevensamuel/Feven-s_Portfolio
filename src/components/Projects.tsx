@@ -29,8 +29,8 @@ interface Project {
   features: string[];
   techHighlights: string[];
   isMobile: boolean;
-  isInProgress?: boolean;
   isTeam?: boolean;
+  badges: string[];
   logoLetters: string;
   logoUrl: string;
   liveDemoUrl: string;
@@ -39,46 +39,12 @@ interface Project {
 
 const PROJECTS_DATA: Project[] = [
   {
-    id: 'isquiz',
-    title: 'IsQuiz',
-    subtitle: 'Mobile-Optimized Interactive Study Application',
-    description: 'A highly polished, mobile-optimized interactive study application designed to help IS students review, practice, and master core topics.',
-    extendedDescription: 'IsQuiz is designed to help Information Systems students review, practice, and master core topics in Mobile Computing, Networking, Database, Security, and Ecommerce.',
-    tech: ['React Native', 'JavaScript', 'AsyncStorage'],
-    features: [
-      'Dual Theme Engine (☀️/🌙) for late-night exam prep.',
-      'Mobile-First Simulator with category selectors.',
-      'Feedback Cards with validation animations.',
-      'Global Exam Speed Timer (⏱️) with 30-second limit.',
-      'Smart Scoring & Performance Metrics.',
-    ],
-    techHighlights: [
-      'Engineered responsive local states to manage asynchronous question flows.',
-      'Developed custom layout algorithms optimized for mobile.',
-    ],
-    isMobile: true,
-    logoLetters: '?Q',
-    logoUrl: '/logos/isquiz_logo.png',
-    liveDemoUrl: '#',
-    screenshots: [
-      '/screenshots/IS1.jpg',
-      '/screenshots/IS2.jpg',
-      '/screenshots/IS3.jpg',
-      '/screenshots/IS4.jpg',
-      '/screenshots/IS5.jpg',
-      '/screenshots/IS6.jpg',
-      '/screenshots/IS7.jpg',
-      '/screenshots/IS8.jpg',
-      '/screenshots/IS9.jpg',
-    ],
-  },
-  {
     id: 'bet4rent',
     title: 'Bet4Rent',
     subtitle: 'Ethiopian Property Rental Marketplace',
     description: 'A secure, transparent property rental marketplace connecting landlords and tenants in Ethiopia with integrated payments and verified profiles.',
     extendedDescription: 'Bet4Rent is a modern rental marketplace built for Addis Ababa. It connects landlords and tenants through verified profiles, secure payment gateways, and fair refund policies.',
-    tech: ['React Native', 'Django REST', 'Chapa API', 'Firebase Cloud Messaging'],
+    tech: ['React Native', 'Django REST', 'TypeScript', 'Chapa API', 'Firebase Cloud Messaging'],
     features: [
       'Tenant Portal: Browse, filter, and book verified properties.',
       'Landlord Suite: Post listings and manage properties.',
@@ -92,6 +58,8 @@ const PROJECTS_DATA: Project[] = [
       'Programmed a 3-day refund validation sequence.'
     ],
     isMobile: true,
+    isTeam: false,
+    badges: ['Mobile App', 'Full Stack'],
     logoLetters: 'B4R',
     logoUrl: '/logos/bet4rent_icon.png',
     liveDemoUrl: '#',
@@ -139,6 +107,7 @@ const PROJECTS_DATA: Project[] = [
     ],
     isMobile: false,
     isTeam: true,
+    badges: ['Team Work', 'Full Stack'],
     logoLetters: 'DHMS',
     logoUrl: '/logos/aaudhms_logo.png',
     liveDemoUrl: 'https://aau-dhms.vercel.app/',
@@ -175,6 +144,8 @@ const PROJECTS_DATA: Project[] = [
       'Formed Kanban candidate tracking using relational databases.'
     ],
     isMobile: false,
+    isTeam: false,
+    badges: ['Full Stack'],
     logoLetters: 'IF',
     logoUrl: '/logos/internship&jobfinder_logo.png',
     liveDemoUrl: '#',
@@ -209,7 +180,7 @@ const PROJECTS_DATA: Project[] = [
     subtitle: 'Daily/Weekly/Monthly Planner & To-Do Suite',
     description: 'A multi-user personal and academic planner with editable time-blocked grids and priority-allocated To-Do lists.',
     extendedDescription: 'Cozy Paw Planner is an ES module-based local workspace application with login/registration, custom onboarding, and interactive schedule boards.',
-    tech: ['HTML', 'CSS', 'JavaScript (ES modules)', 'Vite'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'React Vite'],
     features: [
       'Daily, Weekly, & Monthly Planner with editable time slots.',
       'Priority To-Do Lists with color swatches and time allocations.',
@@ -223,6 +194,8 @@ const PROJECTS_DATA: Project[] = [
       'Assembled modular, framework-less frontend with Vite.'
     ],
     isMobile: false,
+    isTeam: false,
+    badges: ['Front-End'],
     logoLetters: 'CPP',
     logoUrl: '/logos/cozypawplanner_logo.png',
     liveDemoUrl: 'https://cozy-paw-planner.vercel.app/',
@@ -237,6 +210,42 @@ const PROJECTS_DATA: Project[] = [
       '/screenshots/CP7.png',
     ],
   },
+  {
+    id: 'isquiz',
+    title: 'IsQuiz',
+    subtitle: 'Mobile-Optimized Interactive Study Application',
+    description: 'A highly polished, mobile-optimized interactive study application designed to help IS students review, practice, and master core topics.',
+    extendedDescription: 'IsQuiz is designed to help Information Systems students review, practice, and master core topics in Mobile Computing, Networking, Database, Security, and Ecommerce.',
+    tech: ['React Native', 'JavaScript', 'AsyncStorage'],
+    features: [
+      'Dual Theme Engine (☀️/🌙) for late-night exam prep.',
+      'Mobile Simulator with category selectors.',
+      'Feedback Cards with validation animations.',
+      'Global Exam Speed Timer (⏱️) with 30-second limit.',
+      'Smart Scoring & Performance Metrics.',
+    ],
+    techHighlights: [
+      'Engineered responsive local states to manage asynchronous question flows.',
+      'Developed custom layout algorithms optimized for mobile.',
+    ],
+    isMobile: true,
+    isTeam: false,
+    badges: ['Mobile App'],
+    logoLetters: '?Q',
+    logoUrl: '/logos/isquiz_logo.png',
+    liveDemoUrl: '#',
+    screenshots: [
+      '/screenshots/IS1.jpg',
+      '/screenshots/IS2.jpg',
+      '/screenshots/IS3.jpg',
+      '/screenshots/IS4.jpg',
+      '/screenshots/IS5.jpg',
+      '/screenshots/IS6.jpg',
+      '/screenshots/IS7.jpg',
+      '/screenshots/IS8.jpg',
+      '/screenshots/IS9.jpg',
+    ],
+  },
 ];
 
 const getTechBadgeStyles = (tech: string): string => {
@@ -245,10 +254,14 @@ const getTechBadgeStyles = (tech: string): string => {
     case 'react native':
       return 'bg-purple-50 text-purple-700 border-purple-200/80 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-800/40';
     case 'react':
+    case 'react vite':
       return 'bg-sky-50 text-sky-700 border-sky-200/80 dark:bg-sky-950/40 dark:text-sky-300 dark:border-sky-800/40';
     case 'javascript':
     case 'js':
       return 'bg-amber-50 text-amber-700 border-amber-200/80 dark:bg-amber-950/30 dark:text-amber-300 dark:border-amber-800/40';
+    case 'typescript':
+    case 'ts':
+      return 'bg-blue-50 text-blue-700 border-blue-200/80 dark:bg-blue-950/40 dark:text-blue-300 dark:border-blue-800/40';
     case 'php':
       return 'bg-indigo-50 text-indigo-700 border-indigo-200/80 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-800/40';
     case 'mysql':
@@ -267,6 +280,9 @@ const getTechBadgeStyles = (tech: string): string => {
       return 'bg-orange-50 text-orange-700 border-orange-200/80 dark:bg-orange-950/40 dark:text-orange-300 dark:border-orange-800/40';
     case 'css':
       return 'bg-pink-50 text-pink-700 border-pink-200/80 dark:bg-pink-950/40 dark:text-pink-300 dark:border-pink-800/40';
+    case 'django':
+    case 'django rest':
+      return 'bg-green-50 text-green-700 border-green-200/80 dark:bg-green-950/40 dark:text-green-300 dark:border-green-800/40';
     case 'asyncstorage':
       return 'bg-cyan-50 text-cyan-700 border-cyan-200/80 dark:bg-cyan-950/40 dark:text-cyan-300 dark:border-cyan-800/40';
     default:
@@ -332,23 +348,39 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <div className="absolute top-4 right-4 bg-violet-600/10 text-violet-600 dark:bg-violet-400/10 dark:text-violet-400 text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full font-bold flex items-center gap-1 border border-violet-500/10">
-                  {project.isMobile ? (
-                    <>
-                      <Smartphone className="w-3 h-3" />
-                      Mobile App
-                    </>
-                  ) : project.isTeam ? (
-                    <>
-                      <Users className="w-3 h-3" />
-                      Team Work
-                    </>
-                  ) : (
-                    <>
-                      <Code className="w-3 h-3" />
-                      Full Stack
-                    </>
-                  )}
+                {/* ✅ CORRECTED BADGE RENDERING */}
+                <div className="absolute top-4 right-4 flex flex-col gap-1.5 items-end">
+                  {project.badges.map((badge) => {
+                    let icon;
+                    let colorClass;
+                    
+                    if (badge === 'Mobile App') {
+                      icon = <Smartphone className="w-3 h-3" />;
+                      colorClass = 'bg-violet-600/10 text-violet-600 dark:bg-violet-400/10 dark:text-violet-400 border-violet-500/10';
+                    } else if (badge === 'Team Work') {
+                      icon = <Users className="w-3 h-3" />;
+                      colorClass = 'bg-blue-600/10 text-blue-600 dark:bg-blue-400/10 dark:text-blue-400 border-blue-500/10';
+                    } else if (badge === 'Full Stack') {
+                      icon = <Code className="w-3 h-3" />;
+                      colorClass = 'bg-emerald-600/10 text-emerald-600 dark:bg-emerald-400/10 dark:text-emerald-400 border-emerald-500/10';
+                    } else if (badge === 'Front-End') {
+                      icon = <Code className="w-3 h-3" />;
+                      colorClass = 'bg-amber-600/10 text-amber-600 dark:bg-amber-400/10 dark:text-amber-400 border-amber-500/10';
+                    } else {
+                      icon = <Code className="w-3 h-3" />;
+                      colorClass = 'bg-zinc-600/10 text-zinc-600 dark:bg-zinc-400/10 dark:text-zinc-400 border-zinc-500/10';
+                    }
+                    
+                    return (
+                      <span
+                        key={badge}
+                        className={`text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full font-bold flex items-center gap-1 border ${colorClass}`}
+                      >
+                        {icon}
+                        {badge}
+                      </span>
+                    );
+                  })}
                 </div>
 
                 {project.isInProgress && (
@@ -606,7 +638,7 @@ export default function Projects() {
         )}
       </AnimatePresence>
 
-      {/* ====== SCREENSHOTS MODAL - DEFINITIVE FIX ====== */}
+      {/* ====== SCREENSHOTS MODAL ====== */}
       <AnimatePresence>
         {selectedScreenshotsProject && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">

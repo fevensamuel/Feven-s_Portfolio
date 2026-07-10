@@ -43,7 +43,7 @@ export default function Education() {
                 Addis Ababa University – B.Sc. in Information Science (Rising 4th Year)
               </h3>
               <p className="text-sm text-zinc-600 dark:text-slate-400 leading-relaxed font-sans">
-                <span className="font-semibold text-zinc-800 dark:text-slate-300">Relevant Studies:</span> Database Systems (MySQL), Software Engineering, Web Dev (PHP), DSA.
+                <span className="font-semibold text-zinc-800 dark:text-slate-300">Relevant Studies:</span> Database Systems (MySQL), Web Dev (PHP), DSA, System and Networks, Information System Security, Operating Systems.
               </p>
             </div>
           </motion.div>
@@ -140,7 +140,7 @@ export default function Education() {
                   </div>
                 </div>
 
-                {/* ✅ FIXED: Main Large Image - uses the SAME path as thumbnail */}
+                {/* Main Large Image */}
                 <div className="aspect-[4/3] w-full bg-zinc-100 dark:bg-zinc-900 rounded-xl overflow-hidden border border-zinc-200 dark:border-zinc-800">
                   <img
                     src="/screenshots/Certificate.png"

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { usePortfolio } from '../context/PortfolioContext';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Send, Github, Linkedin, MessageSquare, Check, AlertCircle, Loader2 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
@@ -47,12 +46,13 @@ export default function Contact() {
     setError('');
 
     try {
+      // ✅ FIXED: Variables match your EmailJS template
+      // Your template expects: {{title}}, {{name}}, {{email}}, {{content}}
       const templateParams = {
-        from_name: name,
-        from_email: email,
-        subject: subject,
-        message: message,
-        to_email: YOUR_EMAIL,
+        title: subject,        // → {{title}}
+        name: name,            // → {{name}}
+        email: email,          // → {{email}}
+        content: message,      // → {{content}}
       };
 
       const result = await emailjs.send(
@@ -138,7 +138,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Social profiles - ✅ HARDCODED LINKS */}
+            {/* Social profiles */}
             <div className="pt-6 border-t border-zinc-100 dark:border-slate-800/40">
               <h4 className="text-xs font-mono uppercase tracking-wider text-zinc-400 dark:text-slate-500 mb-3">
                 Social Accounts

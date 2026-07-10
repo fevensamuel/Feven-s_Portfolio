@@ -119,7 +119,7 @@ export default function About() {
                     Web App Engineer
                   </h4>
                   <p className="text-xs text-zinc-500 mt-0.5">
-                    PHP, Django, custom REST APIs, schema optimization, session auth.
+                    PHP, Django, custom REST APIs.
                   </p>
                 </div>
               </div>
