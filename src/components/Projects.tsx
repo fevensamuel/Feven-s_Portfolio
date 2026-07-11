@@ -180,7 +180,7 @@ const PROJECTS_DATA: Project[] = [
     subtitle: 'Daily/Weekly/Monthly Planner & To-Do Suite',
     description: 'A multi-user personal and academic planner with editable time-blocked grids and priority-allocated To-Do lists.',
     extendedDescription: 'Cozy Paw Planner is an ES module-based local workspace application with login/registration, custom onboarding, and interactive schedule boards.',
-    tech: ['HTML', 'CSS', 'JavaScript', 'React Vite'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
     features: [
       'Daily, Weekly, & Monthly Planner with editable time slots.',
       'Priority To-Do Lists with color swatches and time allocations.',
@@ -191,7 +191,7 @@ const PROJECTS_DATA: Project[] = [
     techHighlights: [
       'Programmed custom touch-and-hold gesture listeners.',
       'Engineered state persistence using partitioned localStorage.',
-      'Assembled modular, framework-less frontend with Vite.'
+      'Assembled modular, framework-less frontend with React.'
     ],
     isMobile: false,
     isTeam: false,
@@ -254,7 +254,6 @@ const getTechBadgeStyles = (tech: string): string => {
     case 'react native':
       return 'bg-purple-50 text-purple-700 border-purple-200/80 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-800/40';
     case 'react':
-    case 'react vite':
       return 'bg-sky-50 text-sky-700 border-sky-200/80 dark:bg-sky-950/40 dark:text-sky-300 dark:border-sky-800/40';
     case 'javascript':
     case 'js':

@@ -48,7 +48,7 @@ export default function Skills() {
       icon: <Smartphone className="w-5 h-5 text-violet-500" />,
       skills: [
         { name: 'React Native', level: 80, icon: <Smartphone className="w-4 h-4" />, color: 'bg-violet-500' },
-        { name: 'React Vite', level: 50, icon: <Code2 className="w-4 h-4" />, color: 'bg-fuchsia-500' },
+        { name: 'React', level: 50, icon: <Code2 className="w-4 h-4" />, color: 'bg-fuchsia-500' },
         { name: 'HTML5', level: 90, icon: <Globe className="w-4 h-4" />, color: 'bg-orange-500' },
         { name: 'CSS3', level: 90, icon: <Layers className="w-4 h-4" />, color: 'bg-purple-500' },
         { name: 'Django', level: 50, icon: <Server className="w-4 h-4" />, color: 'bg-emerald-600' },
