@@ -52,7 +52,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-100 tracking-tight leading-snug"
           >
-            Front-end and Mobile app Developer
+            Front-End and Mobile app Developer
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
